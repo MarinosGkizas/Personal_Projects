@@ -18,5 +18,6 @@ begin
         END IF;
     END IF;
     END PROCESS;
+      dout <= reg (7);
 
 end Behavioral;
