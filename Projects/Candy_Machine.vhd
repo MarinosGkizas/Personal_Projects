@@ -16,8 +16,9 @@ begin
 PROCESS(rst,clk)
 BEGIN
     IF(rst = '1') THEN
-    pr_state <= st0;
-    ELSE pr_state <= nx_state;
+        pr_state <= st0;
+    ELSIF (rising_edge(clk)) THEN
+        pr_state <= nx_state;
     END IF;
 END PROCESS;
 
